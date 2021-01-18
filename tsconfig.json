@@ -1,0 +1,80 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "lib": [
+      "es6",
+      "dom",
+      "es2015",
+      "es2016",
+      "es2017"
+    ],
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "jsx": "react-native",
+    "noEmit": true,
+    "isolatedModules": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false,
+    "baseUrl": ".",
+    "paths": {
+      "stores": [
+        "./src/stores"
+      ],
+      "assets": [
+        "./src/assets"
+      ],
+      "themes": [
+        "./src/themes"
+      ],
+      "components": [
+        "./src/components"
+      ],
+      "screens": [
+        "./src/screens"
+      ],
+      "utils": [
+        "./src/utils"
+      ],
+      "settings": [
+        "./src/settings"
+      ],
+      "connections": [
+        "./src/connections"
+      ],
+      "elephanz-rn-ui": [
+        "./elephanz-rn-ui"
+      ],
+      "hooks": [
+        "./src/hooks"
+      ],
+      "contexts": [
+        "./src/contexts"
+      ],
+      "navigation": [
+        "./src/navigation"
+      ],
+      "app": [
+        "./src/app"
+      ],
+      "shared": [
+        "./shared"
+      ],
+      "hoc": [
+        "./src/hoc"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js"
+  ]
+}
