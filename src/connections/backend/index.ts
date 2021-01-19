@@ -55,8 +55,8 @@ export const backendAxiosFactory = () => {
   });
 
   const requestSuccessInterceptor = (async (value: ExtendedAxiosRequestConfig) => {
-    value.params.api_key = apiKey;
-    value.params.language = 'en-US'
+    value.params.api_key = apiKey();
+    value.params.language = 'en-US';
     return value;
   });
   backendAxios.instance.interceptors.request.use(requestSuccessInterceptor);

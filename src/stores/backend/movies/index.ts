@@ -31,7 +31,8 @@ createModelSchema(PopularMovie, {
 export class MovieStore extends BaseBackendStore {
   getPopularMovies = async (): Promise<PopularMovie[]> => {
     const data = await this.connections.backend.httpGet(getPopularMovies);
-    return data;
+    console.log('hereee === ', data);
+    return data.results;
   };
 
   @observable _popularMovies: PopularMovie [] = [];
@@ -51,7 +52,7 @@ export class MovieStore extends BaseBackendStore {
     this.makeObservable();
   }
 
-  @action async getProgramById(id: string) {
+  @action async getMovieById(id: string) {
     const data = await this.connections.backend.httpGet(getMovieById(id));
     this.selectedMovie = data;
   }
