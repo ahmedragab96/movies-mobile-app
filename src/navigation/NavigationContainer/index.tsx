@@ -17,8 +17,6 @@ import {
 import {
   ConnectionsProvider,
   StoresProvider,
-  ProviderBridge,
-  LocalizationProvider,
 } from 'components';
 import {
   ROUTES,
@@ -75,13 +73,9 @@ export const AppNavigationContainer: React.FC = () => (
   <NavigationContainer>
     <ConnectionsProvider>
       <StoresProvider>
-        <LocalizationProvider>
-          <ProviderBridge>
-            {
-              generateNavigationElement(Shared.navigation.navigationContainer.element, null)
-            }
-          </ProviderBridge>
-        </LocalizationProvider>
+        {
+          generateNavigationElement(Shared.navigation.navigationContainer.element, null)
+        }
       </StoresProvider>
     </ConnectionsProvider>
   </NavigationContainer>
