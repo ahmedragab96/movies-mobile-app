@@ -18,3 +18,5 @@ const GenreCardComponent: React.FC<GenreCardComponentProps> = () => {
   } = useStyles(styles);
   return <View />;
 }
+
+export * from './types';

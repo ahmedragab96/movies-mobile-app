@@ -18,3 +18,5 @@ const CarouselComponent: React.FC<CarouselComponentProps> = () => {
   } = useStyles(styles);
   return <View />;
 }
+
+export * from './types';

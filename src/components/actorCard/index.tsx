@@ -18,3 +18,5 @@ const ActorCardComponent: React.FC<ActorCardComponentProps> = () => {
   } = useStyles(styles);
   return <View />;
 }
+
+export * from './types';

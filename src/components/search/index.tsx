@@ -18,3 +18,5 @@ const SearchComponent: React.FC<SearchComponentProps> = () => {
   } = useStyles(styles);
   return <View />;
 }
+
+export * from './types';

@@ -18,3 +18,5 @@ const VideoComponent: React.FC<VideoComponentProps> = () => {
   } = useStyles(styles);
   return <View />;
 }
+
+export * from './types';

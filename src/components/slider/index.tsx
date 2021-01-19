@@ -18,3 +18,5 @@ const SliderComponent: React.FC<SliderComponentProps> = () => {
   } = useStyles(styles);
   return <View />;
 }
+
+export * from './types';

@@ -27,6 +27,9 @@ const ${exported_component_component_name}: React.FC<${exported_component_compon
   return <View />;
 }
 
+
+export * from './types';
+
 EOF
   )
   component_types_content=$(

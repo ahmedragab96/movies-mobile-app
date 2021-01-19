@@ -18,3 +18,7 @@ const MovieCardComponent: React.FC<MovieCardComponentProps> = () => {
   } = useStyles(styles);
   return <View />;
 }
+
+export * from './types';
+
+export * from './types';

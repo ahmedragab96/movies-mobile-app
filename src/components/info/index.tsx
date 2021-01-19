@@ -18,3 +18,5 @@ const InfoComponent: React.FC<InfoComponentProps> = () => {
   } = useStyles(styles);
   return <View />;
 }
+
+export * from './types';
