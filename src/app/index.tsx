@@ -11,9 +11,6 @@ import {
 import {
   Settings,
 } from 'settings';
-import {
-  UpdatingProgressBar,
-} from 'components';
 import codePush from 'react-native-code-push';
 
 import {
@@ -34,7 +31,6 @@ const App: React.FC = () => {
         }}
       >
         <AppNavigationContainer />
-        <UpdatingProgressBar />
       </SafeAreaView>
     </ThemeProvider>
   );
