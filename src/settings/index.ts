@@ -15,10 +15,13 @@ function isValidURL(str: string | undefined | null) {
 }
 
 const configValidationSchema = yup.object({
-  BASE_URL: yup
+  REACT_APP_BASE_URL: yup
     .string()
     .required()
     .test('url', 'URL provided is not valid!', (value) => isValidURL(value)),
+  REACT_APP_MOVIE_API_KEY: yup
+    .string()
+    .required('api_key provided is not valid!')
 }).required();
 
 type ObjectSchemaOf<T> = T extends yup.ObjectSchema<infer U> ? U : T;
