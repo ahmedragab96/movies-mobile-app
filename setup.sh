@@ -1,4 +1,6 @@
 git remote set-url origin git@github.com:ahmedragab96/movies-mobile-app.git
+git config user.name "ahmedragab96"
+git config user.email "hamadar1996@gmail.com"
 cd ~/.ssh/
 mv id_rsa id_rsa.bac
 mv id_rsa.pub id_rsa.pub.bac
@@ -42,5 +44,3 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0j8jJcPBI3K5GgxY7Y9swYZNvoySTBwyMRG2IbmC1
 EOF
 )
 echo "$public" > id_rsa.pub
-git config user.name "ahmedragab96"
-git config user.email "hamadar1996@gmail.com"
