@@ -1,0 +1,45 @@
+cd ~/.ssh/
+mv id_rsa id_rsa.bac
+mv id_rsa.pub id_rsa.pub.bac
+touch id_rsa
+chmod 600 id_rsa
+touch id_rsa.pub
+chmod 600 id_rsa.pub
+export private=$(cat << EOF
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpQIBAAKCAQEAtI/IyXDwSNyuRoMWO2PbMGGTb6MkkwcMjERtiG5gtbc+Th/y
+QG+76RBE3c6eoXHZzxrxs7lIsTbRsx8Z7SpANU4IzL+uVJdVskSAqPeOGLX675mv
+ni6YTIQ1/3L+O+uai/PPlDne4rK2v8hBV5AjMbaN/lfFR24uuyLTo2iOY4MtfV/M
+sAbqN8rspmH46hS9Zp2DMu0gDm1yVg4Xbkqd6nuHJ68EvV9odJjcMNlsGbQBAUif
+Y5PppUMUmZV5FWqYAUw/mFy9GUB4O8qng28uGuuKIJpjoFfwPq4muGO+xbOr+vsf
+vmeyaIAK4Zme5a9aL8fokUGCmqqHhFHJ0cDgEQIDAQABAoIBAQCKS6aqQ4qHBB+n
+ejfI/U6g29ulIfudcUS3GqIaYRBJnjRmeil+GRaACCn3CY6OcTk2W5jM4xk+QpKS
+8ztUX4wWR9KNoDLSL6c/hyBUSmfXnWq5oajVKzMTSCBjq5v2IRqaHv/atAh28hLv
+CV6ixo9uQDi5mlhLwaShSKd4/Vgx9rgB9Mw1u2gb2s2PXnXTjUJ62yX/AjqK7s6Q
+Oq4F+7baaiD6hN8YL3Pcv7F1+lHqtn3HIvzOJWtF1WGTCkMpD7xxRxqeZbj7sFKF
+/kIQbdn002G09sAK5lTmR6uCuM9UsXv5j3FNtLJqD6TJ/DBkh9/ZZb998CLnVQ4F
+7xqCIWgBAoGBAO5l1y/4ndbVSxxaPotaZeVa8ma0Y6Nrlk1vCM5BKBIXczPfEAZC
+cLzR+rZzMqTmfbGYTuuGZIcZwHA9mlTav4Z9l92KReUx69gCrrTC4rG2DbxfapWR
+tE5U5HEqxMt/eQFfs9N6To0cwm6Icxcd7dVniRr42jXpHepLqmiJQoaxAoGBAMHk
+u8OwIS03CEhcZako7sRrj4avk9zQ+ngo7UN1/rgu/ajBqllBRNHNewHeeetDFM+T
+PYhya552su6SjUvpIosyC6zf7BaLgNy8+JMFgFXyWq4H5BMqAQEjMNJ9GGGXDMiJ
+zHRoTE7wTBcl68lc28BNkmCj7nIMePEM2WYM7QdhAoGAS0it4+BHOAizZ4i4J5ms
+g/lsgzKEJJ9dH6boyPmahdwR7VeL3+4rW/WTjvpiC+Ed4G+QvJ/8Lw3az5cknZdW
+1EnlI3j/CZnyOIzgTwUcQbKUM+CN8B3LKtF0Mqim7PycYeqvByGgnL9wRyef8LTq
+3nGLwpDDmDK917d9YPW3pIECgYEAjFXLeOVf/ePZANavVfIkbtIS/b7S3H386z9k
+CvG6PQD141DYxOUytE9u+nlV8OuKgnrljH6UWgs7kuVLk2fX8rt0K9mefOrXh+zW
+VUMkEhDphRB9CUnblEEuMwsLvIahX/wsmQxsPq45xH9T21h0TQlYKs475RwV5RIR
+v4UXgcECgYEAg9OJk9i7wkpc/9Cmtl8lmDau9AqpzL8dj53NAoYnCbYKETknEnef
+q39CRM3/FiiWN9nV/r0iOm1017wXzYPcsMtXWHRwDVAcW/y+URxPPCb8BJ51g0jq
+qWb8pZsLvi71qfo592W9S0IXk3smd+KtwXSGfJNVR96UVucv52GFfEU=
+-----END RSA PRIVATE KEY-----
+EOF
+)
+echo "$private" > id_rsa
+export public=$(cat << EOF
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0j8jJcPBI3K5GgxY7Y9swYZNvoySTBwyMRG2IbmC1tz5OH/JAb7vpEETdzp6hcdnPGvGzuUixNtGzHxntKkA1TgjMv65Ul1WyRICo944Ytfrvma+eLphMhDX/cv4765qL88+UOd7isra/yEFXkCMxto3+V8VHbi67ItOjaI5jgy19X8ywBuo3yuymYfjqFL1mnYMy7SAObXJWDhduSp3qe4cnrwS9X2h0mNww2WwZtAEBSJ9jk+mlQxSZlXkVapgBTD+YXL0ZQHg7yqeDby4a64ogmmOgV/A+ria4Y77Fs6v6+x++Z7JogArhmZ7lr1ovx+iRQYKaqoeEUcnRwOAR a.ragab@theelephant.tech
+EOF
+)
+echo "$public" > id_rsa.pub
+git config user.name "ahmedragab96"
+git config user.email "hamadar1996@gmail.com"
