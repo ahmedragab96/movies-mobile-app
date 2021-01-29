@@ -5,12 +5,12 @@ import {
 export const defaultThemeFactory = () => new Theme({
   palette: {
     primary: {
-      value: '#0F206C',
+      value: '#E5E5E5',
       contrast: '#F0EFFF',
       disabledValue: '#878FB5',
     },
     secondary: {
-      value: '#EE8F21',
+      value: '#FF3365',
       disabledValue: '#7E5747',
     },
     info: {
