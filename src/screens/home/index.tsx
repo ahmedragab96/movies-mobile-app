@@ -11,17 +11,44 @@ import {
   useStores,
 } from 'hooks';
 import { LoadingState } from 'utils';
+import { ExtendedSVG, useStyles } from 'elephanz-rn-ui';
+import { Assets } from 'assets';
+import styles from './styles';
+
+const {
+  images: {
+    screens: {
+      home,
+    },
+  },
+} = Assets;
 
 const homeScreen: React.FC = () => {
   const stores = useStores();
   const navigation = useNavigationUtils();
+  const {
+    selectStyle,
+  } = useStyles(styles);
+
+  const TabBarIcon = ({
+    focused,
+  }: { focused: boolean }) => {
+    const icon = focused ? home.homeActive : home.home;
+    return (
+      <View style={selectStyle('tabBarIcon')}>
+        <ExtendedSVG
+          svgFile={icon}
+        />
+      </View>
+    );
+  };
 
   useEffect(() => {
     stores.backend.movies.popularMovies.fetch();
-    // navigation.setOptions({
-    //   title: '',
-    //   tabBarIcon: TabBarIcon,
-    // });
+    navigation.setOptions({
+      title: '',
+      tabBarIcon: TabBarIcon,
+    });
   }, []);
 
   if (stores.backend.movies.popularMovies.loadingState === LoadingState.LOADING) {
