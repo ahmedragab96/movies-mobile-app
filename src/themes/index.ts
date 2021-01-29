@@ -7,7 +7,7 @@ export const defaultThemeFactory = () => new Theme({
     primary: {
       value: '#E5E5E5',
       contrast: '#F0EFFF',
-      disabledValue: '#878FB5',
+      disabledValue: '#777777',
     },
     secondary: {
       value: '#FF3365',

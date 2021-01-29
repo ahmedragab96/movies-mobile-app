@@ -9,6 +9,8 @@ target 'contact' do
   use_react_native!(:path => config["reactNativePath"])
 
   use_flipper!
+  pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
+
   post_install do |installer|
     flipper_post_install(installer)
     installer.pods_project.targets.each do |t|

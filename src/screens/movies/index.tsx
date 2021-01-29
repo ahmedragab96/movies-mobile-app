@@ -11,7 +11,7 @@ import {
   useStores,
 } from 'hooks';
 import { LoadingState } from 'utils';
-import { ExtendedSVG, useStyles } from 'elephanz-rn-ui';
+import { ExtendedSVG, Typography, useStyles, useTheme } from 'elephanz-rn-ui';
 import { Assets } from 'assets';
 import styles from './styles';
 
@@ -29,16 +29,37 @@ const moviesScreen: React.FC = () => {
   const {
     selectStyle,
   } = useStyles(styles);
+  const {
+    theme,
+  } = useTheme();
 
   const TabBarIcon = ({
     focused,
   }: { focused: boolean }) => {
     const icon = focused ? home.moviesActive : home.movies;
+    const color = focused ? theme.palette.secondary.value : theme.palette.primary.disabledContrast;
     return (
+      <View
+        style={{
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
       <View style={selectStyle('tabBarIcon')}>
         <ExtendedSVG
           svgFile={icon}
         />
+      </View>
+      <Typography
+        variant={'button'}
+        customStyles={() => ({
+          text: {
+            color,
+          }
+        })}
+      >
+        Movies
+      </Typography>
       </View>
     );
   };
@@ -52,7 +73,7 @@ const moviesScreen: React.FC = () => {
  
   return <View>
     <Text>
-      hello
+      Movies Screen
     </Text>
   </View>;
 }

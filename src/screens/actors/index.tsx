@@ -11,7 +11,7 @@ import {
   useStores,
 } from 'hooks';
 import { LoadingState } from 'utils';
-import { ExtendedSVG, useStyles } from 'elephanz-rn-ui';
+import { ExtendedSVG, Typography, useStyles, useTheme } from 'elephanz-rn-ui';
 import { Assets } from 'assets';
 import styles from './styles';
 
@@ -30,16 +30,37 @@ const actorsScreen: React.FC = () => {
   const {
     selectStyle,
   } = useStyles(styles);
+  const {
+    theme,
+  } = useTheme();
 
   const TabBarIcon = ({
     focused,
   }: { focused: boolean }) => {
     const icon = focused ? home.actorsActive : home.actors;
+    const color = focused ? theme.palette.secondary.value : theme.palette.primary.disabledContrast;
     return (
+      <View
+        style={{
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
       <View style={selectStyle('tabBarIcon')}>
         <ExtendedSVG
           svgFile={icon}
         />
+      </View>
+      <Typography
+        variant={'button'}
+        customStyles={() => ({
+          text: {
+            color,
+          }
+        })}
+      >
+        Actors
+      </Typography>
       </View>
     );
   };
@@ -53,7 +74,7 @@ const actorsScreen: React.FC = () => {
  
   return <View>
     <Text>
-      hello
+      Actors Screen
     </Text>
   </View>;
 }
