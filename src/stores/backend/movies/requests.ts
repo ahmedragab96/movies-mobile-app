@@ -1,2 +1,10 @@
 export const getPopularMovies = 'movie/popular';
-export const getMovieById = (id: string) => '';
+export const getUpComingMovies = `movie/upcoming`;
+export const getTopRatedMovies = `movie/top_rated`;
+
+export const getMovieById = (id: string) => `movie/${id}`;
+export const searchMovies = `search/movie`;
+
+export const getMoviesGenres = `genre/movie/list`;
+
+export const getActorById = (id: string) => `person/${id}`;

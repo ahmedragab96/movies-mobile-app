@@ -7,8 +7,9 @@ import {
   primitive,
 } from 'serializr';
 import {
-  PopularMovie,
-  Movie
+  Actor,
+  Movie,
+  Genre,
 } from 'shared/DTOs/movies';
 import {
   ListBackendEntity,
@@ -21,28 +22,88 @@ import {
 } from '../types';
 import {
   getPopularMovies,
-  getMovieById
+  getActorById,
+  getMoviesGenres,
+  getTopRatedMovies,
+  getUpComingMovies,
+  searchMovies,
+  getMovieById,
 } from './requests';
 
-createModelSchema(PopularMovie, {
+createModelSchema(Movie, {
 
 });
 
 export class MovieStore extends BaseBackendStore {
-  getPopularMovies = async (): Promise<PopularMovie[]> => {
+  getPopularMovies = async (): Promise<Movie[]> => {
     const data = await this.connections.backend.httpGet(getPopularMovies);
-    console.log('hereee === ', data);
+    console.log('popular === ', data);
     return data.results;
   };
 
-  @observable _popularMovies: PopularMovie [] = [];
+  getTopRatedMovies = async (): Promise<Movie[]> => {
+    const data = await this.connections.backend.httpGet(getTopRatedMovies);
+    console.log('top rated === ', data);
+    return data.results;
+  };
+
+  getUpComingMovies = async (): Promise<Movie[]> => {
+    const data = await this.connections.backend.httpGet(getUpComingMovies);
+    console.log('up coming === ', data);
+    return data.results;
+  };
+
+  getAllMovies = async (): Promise<Movie[]> => {
+    const data = await this.connections.backend.httpGet(getPopularMovies);
+    console.log('all movies === ', data);
+    return data.results;
+  };
+
+  getGenres = async (): Promise<Genre[]> => {
+    const data = await this.connections.backend.httpGet(getMoviesGenres);
+    console.log('Genres === ', data);
+    return data.results;
+  };
+
+
+  @observable _popularMovies: Movie [] = [];
+  @observable _topRatedMovies: Movie [] = [];
+  @observable _upComingMovies: Movie [] = [];
+  @observable _allMOvies: Movie [] = [];
+
+  @observable _genres: Genre [] = [];
 
   @observable selectedMovie: Movie = {} as Movie;
+  @observable selectedActor: Actor = {} as Actor;
 
   @observable popularMovies = new ListBackendEntity(
     this,
     '_popularMovies',
     this.getPopularMovies,
+  );
+
+  @observable topRatedMovies = new ListBackendEntity(
+    this,
+    '_topRatedMovies',
+    this.getTopRatedMovies,
+  );
+
+  @observable upComingMovies = new ListBackendEntity(
+    this,
+    '_upComingMovies',
+    this.getUpComingMovies,
+  );
+
+  @observable genres = new ListBackendEntity(
+    this,
+    '_genres',
+    this.getGenres,
+  );
+
+  @observable allMovies = new ListBackendEntity(
+    this,
+    '_allMovies',
+    this.getAllMovies,
   );
 
   constructor(
@@ -55,5 +116,10 @@ export class MovieStore extends BaseBackendStore {
   @action async getMovieById(id: string) {
     const data = await this.connections.backend.httpGet(getMovieById(id));
     this.selectedMovie = data;
+  }
+
+  @action async getActorById(id: string) {
+    const data = await this.connections.backend.httpGet(getActorById(id));
+    this.selectedActor = data;
   }
 }
