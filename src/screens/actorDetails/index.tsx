@@ -16,6 +16,8 @@ import { Assets } from 'assets';
 import styles from './styles';
 import { LoadingState } from 'utils';
 import SliderComponent from 'src/components/slider';
+import { toJS } from 'mobx';
+import MovieCardComponent from 'src/components/movieCard';
 
 const {
   images: {
@@ -70,6 +72,13 @@ const actorDetailsScreen: React.FC = () => {
 
   const birth = new Date(birthday);
   const formattedBirthDay = birth.toLocaleString('default', { month: 'long', day: 'numeric', year: 'numeric'});
+
+  const renderItem = (data: any) => {
+    const { poster_path, title } = toJS(data.item);
+    return (
+      <MovieCardComponent poster={poster_path} title={title} />
+    )
+  }
  
   return (
     <View
@@ -137,7 +146,12 @@ const actorDetailsScreen: React.FC = () => {
             </Typography>
           </View>
         </View>
-        <SliderComponent data={stores.backend.movies.selectedActorMovies} subTitle="Known For"/>
+        <SliderComponent
+          data={stores.backend.movies.selectedActorMovies}
+          subTitle="Known For"
+          renderItem={renderItem}
+          keyExtractor={item => (item.id).toString()}
+        />
         <View
           style={selectStyle('biographyContainer')}
         >
