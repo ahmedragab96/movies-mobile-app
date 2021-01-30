@@ -7,4 +7,5 @@ export const searchMovies = `search/movie`;
 
 export const getMoviesGenres = `genre/movie/list`;
 
+export const getActors = `person/popular`;
 export const getActorById = (id: string) => `person/${id}`;

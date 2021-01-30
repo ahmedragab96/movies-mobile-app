@@ -28,6 +28,7 @@ import {
   getUpComingMovies,
   searchMovies,
   getMovieById,
+  getActors,
 } from './requests';
 
 createModelSchema(Movie, {
@@ -65,6 +66,12 @@ export class MovieStore extends BaseBackendStore {
     return data.results;
   };
 
+  getActors = async (): Promise<Actor[]> => {
+    const data = await this.connections.backend.httpGet(getActors);
+    console.log('Actors === ', data);
+    return data.results;
+  };
+
 
   @observable _popularMovies: Movie [] = [];
   @observable _topRatedMovies: Movie [] = [];
@@ -75,6 +82,13 @@ export class MovieStore extends BaseBackendStore {
 
   @observable selectedMovie: Movie = {} as Movie;
   @observable selectedActor: Actor = {} as Actor;
+  @observable _actors: Actor[] = [];
+
+  @observable actors = new ListBackendEntity(
+    this,
+    '_actors',
+    this.getActors,
+  );
 
   @observable popularMovies = new ListBackendEntity(
     this,
