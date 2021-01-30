@@ -3,7 +3,8 @@ import {
   ActivityIndicator,
   Image,
   View,
-  FlatList,
+  ScrollView,
+  ListRenderItem,
 } from 'react-native';
 import {
   baseScreen,
@@ -20,6 +21,8 @@ import { toJS } from 'mobx';
 import SliderComponent from '../../components/slider';
 import CarouselComponent from '../../components/carousel';
 import MovieCardComponent from 'src/components/movieCard';
+import { MovieCardComponentProps, MovieCardVariants } from '../../components/movieCard/types';
+import { Movie } from 'shared/DTOs';
 // https://image.tmdb.org/t/p/w780/
 const {
   images: {
@@ -76,19 +79,23 @@ const homeScreen: React.FC = () => {
       tabBarIcon: TabBarIcon,
     });
   }, []);
-  
-  const renderItem = (data: any) => {
-    const { poster_path, title } = toJS(data.item);
+
+  const renderItem: ListRenderItem<Movie> = ({item}) =>  {
+
     return (
-      <MovieCardComponent poster={poster_path} title={title} />
+      <MovieCardComponent data={item} variant={MovieCardVariants.LIST} />
+    )
+  }
+  const renderItemCarousel: ListRenderItem<Movie> = ({item}) => {
+    return (
+      <MovieCardComponent data={item} variant={MovieCardVariants.FOCUSE} />
     )
   }
   const { data: popular, loadingState } = stores.backend.movies.popularMovies;
   const { data: TopRated, loadingState: TopRatedLoading } = stores.backend.movies.topRatedMovies;
   const { data: upComing, loadingState: upComingLoading } = stores.backend.movies.upComingMovies;
-  console.log(toJS(upComing), ' This is UpComingMoview');
 
-  if (loadingState === LoadingState.LOADING && TopRatedLoading === LoadingState.LOADING) {
+  if (loadingState === LoadingState.LOADING || TopRatedLoading === LoadingState.LOADING || upComingLoading === LoadingState.LOADING) {
     return (
       <ActivityIndicator
         size="small"
@@ -98,7 +105,11 @@ const homeScreen: React.FC = () => {
     )
   }
   return (
-    <View style={selectStyle('container')}>
+    <ScrollView style={selectStyle('container')}>
+      <CarouselComponent 
+        data={upComing} 
+        renderItem={renderItemCarousel} 
+        />
       <SliderComponent
         data={popular}
         subTitle="Popular"
@@ -111,7 +122,7 @@ const homeScreen: React.FC = () => {
         renderItem={renderItem}
         keyExtractor={item => (item.id).toString()}
       />
-    </View>
+    </ScrollView>
   );
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   View,
+  Dimensions,
 } from 'react-native';
 import {
   Typography,
@@ -14,18 +15,25 @@ import {
 } from './styles';
 import Carousel from 'react-native-snap-carousel';
 
-interface Props {
-  data: any;
-}
-const CarouselComponent: React.FC<Props> = () => {
+
+function CarouselComponent<T>(props: React.PropsWithChildren<CarouselComponentProps<T>>) {
+  console.log(props.data, ' THIS IS GENARIC DATA');
+  const { data, renderItem } = props;
+  
   const {
     selectStyle,
   } = useStyles(styles);
   return (
-    <View>
-      <Typography>
-        {'This is my Carousel Component'}
-      </Typography>
+    <View> 
+        <Carousel 
+          data={data}
+          renderItem={renderItem}
+          sliderWidth={Dimensions.get('window').width}
+          sliderHeight={Dimensions.get('window').width * 439 / 780}
+          itemHeight={Dimensions.get('window').width * 439 / 780}
+          itemWidth={Dimensions.get('window').width}
+          pagingEnabled
+          />
     </View>
   );
 }
