@@ -29,18 +29,21 @@ const ActorCardComponent: React.FC<ActorCardComponentProps> = (props: ActorCardC
   const navigation = useNavigationUtils();
   
   return (
-    <TouchableOpacity
+    <View
       style={selectStyle('actorCardContainer')}
-      onPress={() => navigation.navigate('ActorDetailsScreen', {
-        actorId: props.id,
-      })}
     >
-      <Image
-        source={{
-          uri: `${IMAGE_BASE_URL}/${props.picture}`
-        }}
-        style={selectStyle('actorProfileImage')}
-      />
+      <TouchableOpacity
+        onPress={() => navigation.navigate('actorDetails', {
+          actorId: props.id,
+        })}
+      >
+        <Image
+          source={{
+            uri: `${IMAGE_BASE_URL}/${props.picture}`
+          }}
+          style={selectStyle('actorProfileImage')}
+        />
+      </TouchableOpacity>
       <View
         style={selectStyle('actorDescContainer')}
       >
@@ -61,7 +64,7 @@ const ActorCardComponent: React.FC<ActorCardComponentProps> = (props: ActorCardC
           {props.knownFor}
         </Typography>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 }
 

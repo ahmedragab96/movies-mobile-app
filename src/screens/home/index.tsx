@@ -46,10 +46,7 @@ const homeScreen: React.FC = () => {
     const color = focused ? theme.palette.secondary.value : theme.palette.primary.disabledContrast;
     return (
       <View
-        style={{
-          display: "flex",
-          alignItems: "center",
-        }}
+        style={selectStyle('tabBarIconContainer')}
       >
         <View style={selectStyle('tabBarIcon')}>
           <ExtendedSVG

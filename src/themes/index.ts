@@ -18,7 +18,7 @@ export const defaultThemeFactory = () => new Theme({
       contrast: '#FFFFFF',
     },
     others: {
-      bottomTabsBackground: '#F9F9F9',
+      bottomTabsBackground: '#1B1B28',
       background: '#222232',
     },
   },

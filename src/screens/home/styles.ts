@@ -7,6 +7,7 @@ import {
 } from 'elephanz-rn-ui';
 
 interface IStyles {
+  tabBarIconContainer: ViewStyle;
   tabBarIcon: ViewStyle;
   spinnerStyle: ViewStyle;
   container: ViewStyle;
@@ -22,8 +23,16 @@ const styles = (theme: Theme): IStyles => {
     },
   } = theme;
   return {
+    tabBarIconContainer: {
+      display: "flex",
+      alignItems: "center",
+      backgroundColor: theme.palette.others.bottomTabsBackground,
+      width: 100,
+      marginTop: spacing(2),
+    },
     container: {
       backgroundColor: theme.palette.others.background,
+      flex: 1,
     },
     tabBarIcon: {
       width: spacing(2.5),
