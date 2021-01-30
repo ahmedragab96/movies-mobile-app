@@ -19,6 +19,7 @@ export const defaultThemeFactory = () => new Theme({
     },
     others: {
       bottomTabsBackground: '#F9F9F9',
+      background: '#222232',
     },
   },
   spacing: {

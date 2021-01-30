@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import {
-  Text,
+  ActivityIndicator,
+  Image,
   View,
+  FlatList,
 } from 'react-native';
 import {
   baseScreen,
@@ -14,7 +16,10 @@ import { LoadingState } from 'utils';
 import { ExtendedSVG, Typography, useStyles, useTheme } from 'elephanz-rn-ui';
 import { Assets } from 'assets';
 import styles from './styles';
-
+import { toJS } from 'mobx';
+import SliderComponent from '../../components/slider';
+import LinearGradient from 'react-native-linear-gradient';
+// https://image.tmdb.org/t/p/w780/
 const {
   images: {
     screens: {
@@ -45,20 +50,20 @@ const homeScreen: React.FC = () => {
           alignItems: "center",
         }}
       >
-      <View style={selectStyle('tabBarIcon')}>
-        <ExtendedSVG
-          svgFile={icon}
-        />
-      </View>
-      <Typography
-        variant={'button'}
-        customStyles={() => ({
-          text: {
-            color,
-          }
-        })}
-      >
-        Home
+        <View style={selectStyle('tabBarIcon')}>
+          <ExtendedSVG
+            svgFile={icon}
+          />
+        </View>
+        <Typography
+          variant={'button'}
+          customStyles={() => ({
+            text: {
+              color,
+            }
+          })}
+        >
+          Home
       </Typography>
       </View>
     );
@@ -66,23 +71,30 @@ const homeScreen: React.FC = () => {
 
   useEffect(() => {
     stores.backend.movies.popularMovies.fetch();
+    stores.backend.movies.topRatedMovies.fetch();
     navigation.setOptions({
       title: '',
       tabBarIcon: TabBarIcon,
     });
   }, []);
 
-  if (stores.backend.movies.popularMovies.loadingState === LoadingState.LOADING) {
-    return <Text> loading.... </Text>
+  const { data: popular, loadingState } = stores.backend.movies.popularMovies;
+  const { data: TopRated, loadingState: TopRatedLoading } = stores.backend.movies.topRatedMovies;
+  if (loadingState === LoadingState.LOADING && TopRatedLoading === LoadingState.LOADING) {
+    return (
+      <ActivityIndicator
+        size="small"
+        style={selectStyle('spinnerStyle')}
+        color={theme.palette.secondary.value}
+      />
+    )
   }
-
-  console.log('popular movies === ', stores.backend.movies.popularMovies.data);
-  
-  return <View>
-    <Text>
-      Home Screen
-    </Text>
-  </View>;
+  return (
+    <View style={selectStyle('container')}>
+      <SliderComponent data={popular} subTitle="Popular"/>
+      <SliderComponent data={TopRated} subTitle="Top Rated" />
+    </View>
+  );
 }
 
 export const HomeScreen = baseScreen(
