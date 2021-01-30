@@ -21,7 +21,10 @@ const configValidationSchema = yup.object({
     .test('url', 'URL provided is not valid!', (value) => isValidURL(value)),
   REACT_APP_MOVIE_API_KEY: yup
     .string()
-    .required('api_key provided is not valid!')
+    .required('api_key provided is not valid!'),
+  REACT_APP_YOUTUBE_API_KEY: yup
+    .string()
+    .required('Youtube API key is required!'),
 }).required();
 
 type ObjectSchemaOf<T> = T extends yup.ObjectSchema<infer U> ? U : T;

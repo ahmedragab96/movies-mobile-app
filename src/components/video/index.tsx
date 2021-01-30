@@ -13,6 +13,7 @@ import {
 } from './styles';
 
 import YoutubeTemp from 'react-native-youtube';
+import { Settings } from 'settings';
 
 const Youtube = YoutubeTemp as any;
 
@@ -29,7 +30,7 @@ export const VideoComponent: React.FC<VideoComponentProps> = (props) => {
     >
       <Youtube
         videoIds={[videoId]}
-        apiKey={'AIzaSyCllQItH8vtB1TTGsP-6ufUSU4RWKML0Ro'}
+        apiKey={Settings.config.REACT_APP_YOUTUBE_API_KEY}
         style={selectStyle('player')}
       />
     </View>
