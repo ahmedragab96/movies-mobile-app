@@ -18,7 +18,8 @@ import { Assets } from 'assets';
 import styles from './styles';
 import { toJS } from 'mobx';
 import SliderComponent from '../../components/slider';
-import LinearGradient from 'react-native-linear-gradient';
+import CarouselComponent from '../../components/carousel';
+import MovieCardComponent from 'src/components/movieCard';
 // https://image.tmdb.org/t/p/w780/
 const {
   images: {
@@ -72,14 +73,24 @@ const homeScreen: React.FC = () => {
   useEffect(() => {
     stores.backend.movies.popularMovies.fetch();
     stores.backend.movies.topRatedMovies.fetch();
+    stores.backend.movies.upComingMovies.fetch();
     navigation.setOptions({
       title: '',
       tabBarIcon: TabBarIcon,
     });
   }, []);
-
+  
+  const renderItem = (data: any) => {
+    const { poster_path, title } = toJS(data.item);
+    return (
+      <MovieCardComponent poster={poster_path} title={title} />
+    )
+  }
   const { data: popular, loadingState } = stores.backend.movies.popularMovies;
   const { data: TopRated, loadingState: TopRatedLoading } = stores.backend.movies.topRatedMovies;
+  const { data: upComing, loadingState: upComingLoading } = stores.backend.movies.upComingMovies;
+  console.log(toJS(upComing), ' This is UpComingMoview');
+
   if (loadingState === LoadingState.LOADING && TopRatedLoading === LoadingState.LOADING) {
     return (
       <ActivityIndicator
@@ -91,8 +102,18 @@ const homeScreen: React.FC = () => {
   }
   return (
     <View style={selectStyle('container')}>
-      <SliderComponent data={popular} subTitle="Popular"/>
-      <SliderComponent data={TopRated} subTitle="Top Rated" />
+      <SliderComponent
+        data={popular}
+        subTitle="Popular"
+        renderItem={renderItem}
+        keyExtractor={item => (item.id).toString()}
+      />
+      <SliderComponent
+        data={TopRated}
+        subTitle="Top Rated"
+        renderItem={renderItem}
+        keyExtractor={item => (item.id).toString()}
+      />
     </View>
   );
 }

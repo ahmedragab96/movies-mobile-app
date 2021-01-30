@@ -14,34 +14,26 @@ import {
 import {
   styles,
 } from './styles';
-import { toJS } from 'mobx';
-import MovieCardComponent from '../../components/movieCard';
 
-const SliderComponent: React.FC<SliderComponentProps> = (props) => {
-  const { data, subTitle } = props;
-  
-  const renderItem = (data: any) => {
-    const { poster_path, title } = toJS(data.item);
-    return (
-      <MovieCardComponent poster={poster_path} title={title} />
-    )
-  }
+function SliderComponent<T>(props: React.PropsWithChildren<SliderComponentProps<T>>) {
+  const { data, subTitle, renderItem, keyExtractor } = props;
+
   const {
     selectStyle,
   } = useStyles(styles);
   return (
     <View style={selectStyle('sliderContent')}>
       <View style={selectStyle('subTitleContainer')}>
-      <Typography>
-        {subTitle}
-      </Typography>
+        <Typography>
+          {subTitle}
+        </Typography>
       </View>
       <FlatList
         showsHorizontalScrollIndicator={false}
         horizontal
         data={data}
         renderItem={renderItem}
-        keyExtractor={item => (item.id).toString()}
+        keyExtractor={keyExtractor}
       />
     </View>
   )

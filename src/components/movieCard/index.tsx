@@ -31,7 +31,7 @@ const MovieCardComponent: React.FC<MovieCardComponentProps> = (props) => {
       <Typography
         variant="button"
         ellipsizeMode="tail"
-        numberOfLines={1}
+        numberOfLines={2}
       >
         {title}
       </Typography>

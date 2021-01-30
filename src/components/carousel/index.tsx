@@ -3,6 +3,7 @@ import {
   View,
 } from 'react-native';
 import {
+  Typography,
   useStyles,
 } from 'elephanz-rn-ui';
 import {
@@ -11,12 +12,22 @@ import {
 import {
   styles,
 } from './styles';
+import Carousel from 'react-native-snap-carousel';
 
-const CarouselComponent: React.FC<CarouselComponentProps> = () => {
+interface Props {
+  data: any;
+}
+const CarouselComponent: React.FC<Props> = () => {
   const {
     selectStyle,
   } = useStyles(styles);
-  return <View />;
+  return (
+    <View>
+      <Typography>
+        {'This is my Carousel Component'}
+      </Typography>
+    </View>
+  );
 }
 
-export * from './types';
+export default CarouselComponent;
