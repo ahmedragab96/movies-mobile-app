@@ -45,10 +45,7 @@ const actorsScreen: React.FC = () => {
     const color = focused ? theme.palette.secondary.value : theme.palette.primary.disabledContrast;
     return (
       <View
-        style={{
-          display: "flex",
-          alignItems: "center",
-        }}
+        style={selectStyle('tabBarIconContainer')}
       >
       <View style={selectStyle('tabBarIcon')}>
         <ExtendedSVG
@@ -115,17 +112,15 @@ const actorsScreen: React.FC = () => {
   );
 
   return (
-    <ScrollView
-      style={{
-        display: 'flex',
-        // flex: 1,
-        flexWrap: 'nowrap',
-        marginHorizontal: 10,
-        marginVertical: 10,
-      }}
+    <View
+      style={selectStyle('container')}
     >
-      {scrollableList()}
-    </ScrollView>
+      <ScrollView
+        style={selectStyle('screenContainer')}
+      >
+        {scrollableList()}
+      </ScrollView>
+    </View>
   );
 }
 
