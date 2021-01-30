@@ -12,7 +12,7 @@ import {
   Genre,
 } from 'shared/DTOs/movies';
 import {
-  ListBackendEntity,
+  ListBackendEntity, LoadingState,
 } from 'utils';
 import {
   BackendStores,
@@ -29,6 +29,7 @@ import {
   searchMovies,
   getMovieById,
   getActors,
+  getActorMovies,
 } from './requests';
 
 createModelSchema(Movie, {
@@ -82,7 +83,10 @@ export class MovieStore extends BaseBackendStore {
 
   @observable selectedMovie: Movie = {} as Movie;
   @observable selectedActor: Actor = {} as Actor;
+  @observable selectedActorMovies: Movie[] = [];
   @observable _actors: Actor[] = [];
+  @observable getActorsLoadingState: LoadingState = LoadingState.IDLE;
+  @observable getActorsMoviesLoadingState: LoadingState = LoadingState.IDLE;
 
   @observable actors = new ListBackendEntity(
     this,
@@ -133,7 +137,16 @@ export class MovieStore extends BaseBackendStore {
   }
 
   @action async getActorById(id: string) {
+    this.getActorsLoadingState = LoadingState.LOADING;
     const data = await this.connections.backend.httpGet(getActorById(id));
     this.selectedActor = data;
+    this.getActorsLoadingState = LoadingState.SUCCEEDED;
+  }
+
+  @action async getActorMovies(id: string) {
+    this.getActorsMoviesLoadingState = LoadingState.LOADING;
+    const data = await this.connections.backend.httpGet(getActorMovies(id));
+    this.selectedActorMovies = data.cast;
+    this.getActorsMoviesLoadingState = LoadingState.SUCCEEDED;
   }
 }

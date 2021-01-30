@@ -14,7 +14,7 @@ export const defaultThemeFactory = () => new Theme({
       disabledValue: '#7E5747',
     },
     info: {
-      value: '#736F6F',
+      value: '#C4C4C4',
       contrast: '#FFFFFF',
     },
     others: {
