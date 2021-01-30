@@ -10,6 +10,7 @@ import {
   Actor,
   Movie,
   Genre,
+  MovieSearchOptions,
 } from 'shared/DTOs/movies';
 import {
   ListBackendEntity, LoadingState,
@@ -55,7 +56,17 @@ export class MovieStore extends BaseBackendStore {
     return data.results;
   };
 
-  getAllMovies = async (): Promise<Movie[]> => {
+  getMovies = async (options: MovieSearchOptions): Promise<Movie[]> => {
+    if (options.query) {
+      const data = await this.connections.backend.httpGet(searchMovies, {
+        params: {
+          query: options.query,
+          page: 1,
+        }
+      });
+      console.log('search movies === ', data);
+      return data.results;
+    }
     const data = await this.connections.backend.httpGet(getPopularMovies);
     console.log('all movies === ', data);
     return data.results;
@@ -121,7 +132,7 @@ export class MovieStore extends BaseBackendStore {
   @observable allMovies = new ListBackendEntity(
     this,
     '_allMovies',
-    this.getAllMovies,
+    this.getMovies,
   );
 
   constructor(

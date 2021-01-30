@@ -37,3 +37,7 @@ export class Genre extends BaseDTO {
   name: string;
 }
 
+export interface MovieSearchOptions {
+  query: string;
+}
+
