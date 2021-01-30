@@ -12,11 +12,28 @@ import {
   styles,
 } from './styles';
 
-const VideoComponent: React.FC<VideoComponentProps> = () => {
+import YoutubeTemp from 'react-native-youtube';
+
+const Youtube = YoutubeTemp as any;
+
+export const VideoComponent: React.FC<VideoComponentProps> = (props) => {
+  const {
+    videoId,
+  } = props;
   const {
     selectStyle,
   } = useStyles(styles);
-  return <View />;
+  return (
+    <View
+      style={selectStyle('container')}
+    >
+      <Youtube
+        videoIds={[videoId]}
+        apiKey={'AIzaSyCllQItH8vtB1TTGsP-6ufUSU4RWKML0Ro'}
+        style={selectStyle('player')}
+      />
+    </View>
+  );
 }
 
 export * from './types';

@@ -11,7 +11,7 @@ const splashScreen: React.FC = () => {
   const navigation = useNavigationUtils();
   navigation.navigateTo({
     name: 'home',
-  })
+  });
   return <View />;
 }
 
