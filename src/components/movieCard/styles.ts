@@ -32,6 +32,14 @@ export const styles = (theme: Theme): MovieCardComponentStyles => ({
     // width: theme.spacing.spacing(20)
   },
   ratingContainer: {
-    
+    backgroundColor: theme.palette.others.background,
+    width: theme.spacing.spacing(4),
+    height: theme.spacing.spacing(5),
+    position: 'absolute',
+    marginHorizontal: theme.spacing.spacing(2),
+    marginVertical: theme.spacing.spacing(1),
+    borderRadius: theme.spacing.spacing(1),
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
