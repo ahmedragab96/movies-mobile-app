@@ -24,6 +24,22 @@ export const HeaderComponent: React.FC<HeaderComponentProps> = (props) => {
   const {
     selectStyle,
   } = useStyles(styles, customStyles);
+  
+  if (!imageSource) {
+    return (
+      <View
+        style={selectStyle('container')}
+      >
+        <LinearGradient
+          style={selectStyle('linearGradient')}
+          colors={colors}
+        >
+          {children}
+        </LinearGradient>
+      </View>
+    );
+  }
+
   return (
     <View
       style={selectStyle('container')}

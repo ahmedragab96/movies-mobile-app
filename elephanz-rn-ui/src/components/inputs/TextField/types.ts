@@ -48,6 +48,6 @@ export interface TextFieldProps extends BaseFieldProps<string> {
   unit?: string;
   rightTitle?: string;
   haseErrors?: boolean;
-  rightHint: ReactNode;
+  rightHint?: ReactNode;
   hint?: string;
 }

@@ -8,7 +8,7 @@ export interface HeaderComponentStyles {
 }
 
 export interface HeaderComponentProps {
-  imageSource: ImageSourcePropType;
+  imageSource?: ImageSourcePropType;
   colors: (string | number)[];
   customStyles?: (theme: Theme) => Partial<HeaderComponentStyles>;
 }

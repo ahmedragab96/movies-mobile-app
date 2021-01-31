@@ -59,7 +59,7 @@ export class MovieStore extends BaseBackendStore {
   };
 
   getMovies = async (options: MovieSearchOptions): Promise<Movie[]> => {
-    if (options.query) {
+    if (options && options.query) {
       const data = await this.connections.backend.httpGet(searchMovies, {
         params: {
           query: options.query,

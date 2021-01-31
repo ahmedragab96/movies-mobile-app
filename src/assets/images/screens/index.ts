@@ -6,6 +6,7 @@ import actors from './home/actors.svg';
 import actorsActive from './home/actorsActive.svg';
 import genres from './home/genres.svg';
 import genresActive from './home/genresActive.svg';
+import search from './home/Search.svg';
 
 export class Screens {
   static home = {
@@ -17,5 +18,6 @@ export class Screens {
     actorsActive,
     genres,
     genresActive,
+    search,
   };
 }
