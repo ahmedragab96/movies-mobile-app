@@ -21,6 +21,7 @@ import { toJS } from 'mobx';
 import MovieCardComponent from 'src/components/movieCard';
 import { Movie } from 'shared/DTOs';
 import { MovieCardVariants } from 'src/components/movieCard/types';
+import { HeaderComponent } from 'components';
 
 const {
   images: {
@@ -91,63 +92,71 @@ const actorDetailsScreen: React.FC = () => {
         style={selectStyle('screenCOntainer')} 
       >
         <View
-          style={selectStyle('backButtonContainer')}
+          style={{
+            width: '100%',
+            height: 290,
+          }}
         >
-          <common.back/>
-          <Typography
-            variant={'button'}
-            customStyles={() => ({
-              text: selectStyle('backText')
-            })}
+          <HeaderComponent
+            imageSource={{
+              uri: `${IMAGE_BASE_URL}/${profile_path}`
+            }}
+            colors={['rgba(25,25,38,0)', 'rgba(25,25,38,1)']}
           >
-            Back
-          </Typography>
-        </View>
-        <View
-          style={selectStyle('actorNameContainer')}
-        >
-          <Typography
-            variant={'h1'}
-            customStyles={() => ({
-              text: selectStyle('actorNameText')
-            })}
-          >
-            {name}
-          </Typography>
-        </View>
-        <View
-          style={selectStyle('actorDetailsContainer')}
-        >
-          <View
-            style={selectStyle('actorImageContainer')}
-          >
-            <Image
-              source={{
-                uri: `${IMAGE_BASE_URL}/${profile_path}`
-              }}
-              style={selectStyle('actorImage')}
-            />
-          </View>
-          <View>
-            <Typography
-              variant={'button'}
+            <View style={{
+              flex: 1,
+              justifyContent: 'flex-end',
+              marginBottom: 10,
+              marginHorizontal: 10,
+            }}>
+            <View
+              style={selectStyle('actorNameContainer')}
             >
-              {formattedBirthDay}
-            </Typography>
-            <Typography
-              variant={'button'}  
+              <Typography
+                variant={'h1'}
+                customStyles={() => ({
+                  text: selectStyle('actorNameText')
+                })}
+              >
+                {name}
+              </Typography>
+            </View>
+            <View
+              style={selectStyle('actorDetailsContainer')}
             >
-              {place_of_birth}
-            </Typography>
-            <Typography
-              variant={'button'}
-              customStyles={() => ({
-                text: selectStyle('actorKnowFor')
-              })}
-            >
-              {known_for_department}
-            </Typography>
-          </View>
+              <View
+                style={selectStyle('actorImageContainer')}
+              >
+                <Image
+                  source={{
+                    uri: `${IMAGE_BASE_URL}/${profile_path}`
+                  }}
+                  style={selectStyle('actorImage')}
+                />
+              </View>
+              <View>
+                <Typography
+                  variant={'button'}
+                >
+                  {formattedBirthDay}
+                </Typography>
+                <Typography
+                  variant={'button'}  
+                >
+                  {place_of_birth}
+                </Typography>
+                <Typography
+                  variant={'button'}
+                  customStyles={() => ({
+                    text: selectStyle('actorKnowFor')
+                  })}
+                >
+                  {known_for_department}
+                </Typography>
+              </View>
+            </View>
+            </View>
+          </HeaderComponent>
         </View>
         <SliderComponent
           data={stores.backend.movies.selectedActorMovies}
