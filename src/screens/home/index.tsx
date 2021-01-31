@@ -106,10 +106,18 @@ const homeScreen: React.FC = () => {
   }
   return (
     <ScrollView style={selectStyle('container')}>
-      <CarouselComponent 
-        data={upComing} 
-        renderItem={renderItemCarousel} 
+      <View
+        style={{
+          margin: 10,
+          borderRadius: 10,
+          width: '80%',
+        }}
+      >
+        <CarouselComponent 
+          data={upComing} 
+          renderItem={renderItemCarousel} 
         />
+      </View>
       <SliderComponent
         data={popular}
         subTitle="Popular"

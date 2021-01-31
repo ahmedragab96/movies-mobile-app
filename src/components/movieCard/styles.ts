@@ -28,6 +28,7 @@ export const styles = (theme: Theme): MovieCardComponentStyles => ({
   imageContainerCarousel: {
     flex: 1,
     height: Dimensions.get('window').width * 439 / 780,
+    borderRadius: 10,
     // width: theme.spacing.spacing(20)
   },
   ratingContainer: {

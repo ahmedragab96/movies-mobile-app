@@ -4,6 +4,7 @@ import {
   Text,
   Image,
   ActivityIndicator,
+  ListRenderItem,
 } from 'react-native';
 import {
   baseScreen,
@@ -18,6 +19,8 @@ import { LoadingState } from 'utils';
 import SliderComponent from 'src/components/slider';
 import { toJS } from 'mobx';
 import MovieCardComponent from 'src/components/movieCard';
+import { Movie } from 'shared/DTOs';
+import { MovieCardVariants } from 'src/components/movieCard/types';
 
 const {
   images: {
@@ -73,10 +76,10 @@ const actorDetailsScreen: React.FC = () => {
   const birth = new Date(birthday);
   const formattedBirthDay = birth.toLocaleString('default', { month: 'long', day: 'numeric', year: 'numeric'});
 
-  const renderItem = (data: any) => {
-    const { poster_path, title } = toJS(data.item);
+  const renderItem: ListRenderItem<Movie> = ({item}) =>  {
+
     return (
-      <MovieCardComponent poster={poster_path} title={title} />
+      <MovieCardComponent data={item} variant={MovieCardVariants.LIST} />
     )
   }
  

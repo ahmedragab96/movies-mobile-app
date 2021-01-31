@@ -41,7 +41,12 @@ const MovieCardComponent: React.FC<MovieCardComponentProps> = (props) => {
         </View>
       )}
       {variant === MovieCardVariants.FOCUSE && (
-        <View>
+        <View
+          style={{
+            borderRadius: 10,
+            width: '95%',
+          }}
+        >
           <Image
             style={selectStyle('imageContainerCarousel')}
             resizeMode={"cover"}
@@ -49,12 +54,6 @@ const MovieCardComponent: React.FC<MovieCardComponentProps> = (props) => {
               uri: `https://image.tmdb.org/t/p/w780/${data.backdrop_path}`,
             }}
           />
-          <View>
-            <Typography>
-              {'+16'}
-            </Typography>
-          </View>
-  
         </View>
       )}
     </View>

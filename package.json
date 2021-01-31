@@ -1,5 +1,5 @@
 {
-  "name": "contact",
+  "name": "movies",
   "version": "0.36.0",
   "private": true,
   "scripts": {
@@ -26,10 +26,6 @@
     "version:patch": "npm --no-git-tag-version version patch",
     "postinstall": "jetifier && patch-package",
     "create-tag": "git checkout master && git pull && export version=v$npm_package_version && git tag $version && git push origin --tags",
-    "code-push-ios-staging": "appcenter codepush release-react -a Contact-Egypt/contact-ios -t 0.27.0 --description 'enhance' -d Staging -m",
-    "code-push-ios-production": "appcenter codepush release-react -a Contact-Egypt/contact-ios -t 0.27.0 --description 'enhance' -d Production -m",
-    "code-push-android-staging": "appcenter codepush release-react -a Contact-Egypt/contact-android -t 0.27.0 --description 'enhance' -d Staging -m",
-    "code-push-android-production": "appcenter codepush release-react -a Contact-Egypt/contact-android -t 0.27.0 --description 'enhance' -d Production -m"
   },
   "dependencies": {
     "@react-native-community/async-storage": "1.12.0",
