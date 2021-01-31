@@ -33,6 +33,7 @@ import {
   getActorMovies,
   getMovieVideo,
   getSimilarMovies,
+  getGenreMovies,
 } from './requests';
 
 createModelSchema(Movie, {
@@ -93,7 +94,7 @@ export class MovieStore extends BaseBackendStore {
   };
 
   getMoviesByGenreId = async (options: any): Promise<Movie[]> => {
-    const data = await this.connections.backend.httpGet(getMoviesGenres, {
+    const data = await this.connections.backend.httpGet(getGenreMovies, {
       params: {
         with_genres: options.genreId,
       }

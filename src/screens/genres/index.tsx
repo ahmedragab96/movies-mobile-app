@@ -112,7 +112,9 @@ const genresScreen: React.FC = () => {
     }
     return(
       <TouchableOpacity
-        onPress={() => {}}
+        onPress={() => navigation.navigate('genreDetails', {
+          genreId: genre.id
+        })}
         style={{
           height: 60,
           width: '95%',
