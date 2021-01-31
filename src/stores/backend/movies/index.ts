@@ -32,6 +32,7 @@ import {
   getActors,
   getActorMovies,
   getMovieVideo,
+  getSimilarMovies,
 } from './requests';
 
 createModelSchema(Movie, {
@@ -79,6 +80,12 @@ export class MovieStore extends BaseBackendStore {
     return data.results;
   };
 
+  getSimilarMovies = async (options: any): Promise<Movie[]> => {
+    const data = await this.connections.backend.httpGet(getSimilarMovies(options.id));
+    console.log('similar === ', data);
+    return data.results;
+  };
+
   getActors = async (): Promise<Actor[]> => {
     const data = await this.connections.backend.httpGet(getActors);
     console.log('Actors === ', data);
@@ -100,7 +107,8 @@ export class MovieStore extends BaseBackendStore {
   @observable _topRatedMovies: Movie [] = [];
   @observable _upComingMovies: Movie [] = [];
   @observable _allMOvies: Movie [] = [];
-  @observable _moviesGenre: Movie[] =[];  
+  @observable _moviesGenre: Movie[] =[]; 
+  @observable _similarMovies: Movie[] =[];  
 
   @observable _genres: Genre [] = [];
 
@@ -128,6 +136,12 @@ export class MovieStore extends BaseBackendStore {
     this,
     '_topRatedMovies',
     this.getTopRatedMovies,
+  );
+
+  @observable similarMovies = new ListBackendEntity(
+    this,
+    '_similarMovies',
+    this.getSimilarMovies,
   );
 
   @observable upComingMovies = new ListBackendEntity(

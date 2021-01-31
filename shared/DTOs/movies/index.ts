@@ -17,6 +17,7 @@ export class Movie extends BaseDTO {
   trailer: string;
   vote_average: number;
   vote_count: number;
+  genres: Genre[];
 }
 
 export class Actor extends BaseDTO {

@@ -8,6 +8,8 @@ import {
 
 interface IStyles {
   spinnerStyle: ViewStyle;
+  screenContainer: ViewStyle;
+  movieDetailsContainer: ViewStyle;
 }
 
 const styles = (theme: Theme): IStyles => {
@@ -24,6 +26,13 @@ const styles = (theme: Theme): IStyles => {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center'
+    },
+    screenContainer: {
+      flex: 1,
+      backgroundColor: theme.palette.others.background,
+    },
+    movieDetailsContainer: {
+      marginHorizontal: 10,
     }
   };
 };
