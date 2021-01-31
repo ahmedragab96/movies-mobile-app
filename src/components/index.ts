@@ -8,3 +8,4 @@ export * from './slider';
 export * from './search';
 export * from './video';
 export * from './info';
+export * from './header';

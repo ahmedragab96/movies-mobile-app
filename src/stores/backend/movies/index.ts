@@ -84,11 +84,22 @@ export class MovieStore extends BaseBackendStore {
     return data.results;
   };
 
+  getMoviesByGenreId = async (options: any): Promise<Movie[]> => {
+    const data = await this.connections.backend.httpGet(getMoviesGenres, {
+      params: {
+        with_genres: options.genreId,
+      }
+    });
+    console.log('movie  === ', data);
+    return data.results;
+  };
+
 
   @observable _popularMovies: Movie [] = [];
   @observable _topRatedMovies: Movie [] = [];
   @observable _upComingMovies: Movie [] = [];
   @observable _allMOvies: Movie [] = [];
+  @observable _moviesGenre: Movie[] =[];  
 
   @observable _genres: Genre [] = [];
 
@@ -133,6 +144,12 @@ export class MovieStore extends BaseBackendStore {
     this,
     '_allMovies',
     this.getMovies,
+  );
+
+  @observable moviesGenre = new ListBackendEntity(
+    this,
+    '_moviesGenre',
+    this.getMoviesByGenreId,
   );
 
   constructor(

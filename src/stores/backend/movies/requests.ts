@@ -4,6 +4,7 @@ export const getTopRatedMovies = `movie/top_rated`;
 
 export const getMovieById = (id: string) => `movie/${id}`;
 export const searchMovies = `search/movie`;
+export const getGenreMovies = `discover/movie`;
 
 export const getMoviesGenres = `genre/movie/list`;
 
