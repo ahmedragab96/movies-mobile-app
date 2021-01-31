@@ -14,6 +14,7 @@ export class Movie extends BaseDTO {
   release_date: string;
   title: string;
   video: boolean;
+  trailer: string;
   vote_average: number;
   vote_count: number;
 }
@@ -30,6 +31,7 @@ export class Actor extends BaseDTO {
   place_of_birth: string;
   profile_path: string;
   imdb_id: string;
+  video: string; 
 }
 
 export class Genre extends BaseDTO {

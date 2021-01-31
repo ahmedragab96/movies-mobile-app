@@ -3,6 +3,7 @@ export const getUpComingMovies = `movie/upcoming`;
 export const getTopRatedMovies = `movie/top_rated`;
 
 export const getMovieById = (id: string) => `movie/${id}`;
+export const getMovieVideo = (id: string) => `/movie/${id}/videos`;
 export const searchMovies = `search/movie`;
 export const getGenreMovies = `discover/movie`;
 

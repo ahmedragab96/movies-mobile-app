@@ -31,6 +31,7 @@ import {
   getMovieById,
   getActors,
   getActorMovies,
+  getMovieVideo,
 } from './requests';
 
 createModelSchema(Movie, {
@@ -109,6 +110,7 @@ export class MovieStore extends BaseBackendStore {
   @observable _actors: Actor[] = [];
   @observable getActorsLoadingState: LoadingState = LoadingState.IDLE;
   @observable getActorsMoviesLoadingState: LoadingState = LoadingState.IDLE;
+  @observable getMovieLoadingState: LoadingState = LoadingState.IDLE;
 
   @observable actors = new ListBackendEntity(
     this,
@@ -160,8 +162,12 @@ export class MovieStore extends BaseBackendStore {
   }
 
   @action async getMovieById(id: string) {
+    this.getMovieLoadingState = LoadingState.LOADING;
     const data = await this.connections.backend.httpGet(getMovieById(id));
+    const videos = await this.connections.backend.httpGet(getMovieVideo(id));
     this.selectedMovie = data;
+    this.selectedMovie.trailer = videos.results[0].key;
+    this.getMovieLoadingState = LoadingState.SUCCEEDED;
   }
 
   @action async getActorById(id: string) {

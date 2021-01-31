@@ -2,6 +2,7 @@ import React from 'react';
 import {
   View,
   Image,
+  TouchableOpacity,
 } from 'react-native';
 import {
   useStyles,
@@ -13,16 +14,23 @@ import {
 import {
   styles,
 } from './styles'
+import { useNavigationUtils } from 'hooks';
 
 const MovieCardComponent: React.FC<MovieCardComponentProps> = (props) => {
   const { data, variant } = props;
   const {
     selectStyle,
   } = useStyles(styles);
+  const navigation = useNavigationUtils();
   return (
     <View style={{ flex: 1 }}>
       { variant === MovieCardVariants.LIST && (
-        <View style={selectStyle('cardContainer')}>
+        <TouchableOpacity
+          style={selectStyle('cardContainer')}
+          onPress={() => navigation.navigate('movieDetails', {
+            movieId: data.id
+          })}
+        >
           <Image
             style={selectStyle('imageContainer')}
             source={{
@@ -38,7 +46,7 @@ const MovieCardComponent: React.FC<MovieCardComponentProps> = (props) => {
               {data.title}
             </Typography>
           </View>
-        </View>
+        </TouchableOpacity>
       )}
       {variant === MovieCardVariants.FOCUSE && (
         <View
