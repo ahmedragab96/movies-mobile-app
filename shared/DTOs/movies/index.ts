@@ -44,3 +44,12 @@ export interface MovieSearchOptions {
   query: string;
 }
 
+export enum Genres {
+  HORROR = "Horror",
+  COMEDY = "Comedy",
+  SCIFI = "Science Fiction",
+  FANTASY = "Fantasy",
+  CRIME = "Crime",
+  ROMANCE = "Romance",
+}
+

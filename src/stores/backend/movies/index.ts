@@ -77,7 +77,7 @@ export class MovieStore extends BaseBackendStore {
   getGenres = async (): Promise<Genre[]> => {
     const data = await this.connections.backend.httpGet(getMoviesGenres);
     console.log('Genres === ', data);
-    return data.results;
+    return data.genres;
   };
 
   getSimilarMovies = async (options: any): Promise<Movie[]> => {

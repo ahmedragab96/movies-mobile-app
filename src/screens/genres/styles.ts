@@ -9,6 +9,8 @@ import {
 interface IStyles {
   tabBarIconContainer: ViewStyle;
   tabBarIcon: ViewStyle;
+  screenContainer: ViewStyle;
+  spinnerStyle: ViewStyle;
 }
 
 const styles = (theme: Theme): IStyles => {
@@ -32,6 +34,15 @@ const styles = (theme: Theme): IStyles => {
       width: spacing(2.5),
       height: spacing(2.5),
       marginTop: spacing(2),
+    },
+    screenContainer: {
+      flex: 1,
+      backgroundColor: theme.palette.others.background,
+    },
+    spinnerStyle: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center'
     },
   };
 };
