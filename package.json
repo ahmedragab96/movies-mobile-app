@@ -10,7 +10,7 @@
     "lint:fix": "eslint . --fix",
     "build-js": "tsc",
     "build-android": "npm run build-js && cd android && ./gradlew assembleRelease && cd ..",
-    "postinstall": "jetifier && patch-package",
+    "postinstall": "jetifier"
   },
   "dependencies": {
     "@react-native-community/async-storage": "1.12.0",

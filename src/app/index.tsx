@@ -11,15 +11,9 @@ import {
 import {
   Settings,
 } from 'settings';
-import codePush from 'react-native-code-push';
-
 import {
   defaultThemeFactory,
 } from '../themes';
-
-const codePushOptions = {
-  checkFrequency: codePush.CheckFrequency.MANUAL,
-};
 
 const App: React.FC = () => {
   Settings.init();
@@ -36,4 +30,4 @@ const App: React.FC = () => {
   );
 };
 
-export default codePush(codePushOptions)(App);
+export default App;

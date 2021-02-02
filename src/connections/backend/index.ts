@@ -2,14 +2,11 @@
 import {
   AxiosResponse,
 } from 'axios';
-import EventEmitter from 'eventemitter3';
 import {
   ExtendedAxios,
 } from 'utils';
 import {
   ExtendedAxiosRequestConfig,
-  ExtendedAxiosResponse,
-  ExtendedAxiosError,
 } from 'connections';
 import {
   Settings,
@@ -20,25 +17,6 @@ export enum AuthStatus {
   AUTHORIZING,
   UNAUTHORIZED,
 }
-export class BackendAxios extends ExtendedAxios {
-  getAccessToken: () => string = () => '';
-
-  getRefreshToken: () => string = () => '';
-
-  setAccessToken: (token: string) => void = () => null;
-
-  setRefreshToken: (token: string) => void = () => null;
-
-  refresh: (config?: ExtendedAxiosRequestConfig) => Promise<ExtendedAxiosResponse>;
-
-  logout: () => void = () => null;
-
-  updateTokenHeader = (token: string) => {
-    this.updateDefaultHeaders({
-      Authorization: `Bearer ${token}`,
-    });
-  };
-}
 
 export const backendAxiosFactory = () => {
 
@@ -46,7 +24,7 @@ export const backendAxiosFactory = () => {
   const apiKey = () => Settings.config.REACT_APP_MOVIE_API_KEY;
   const baseURL = setBaseURL();
 
-  const backendAxios = new BackendAxios({
+  const backendAxios = new ExtendedAxios({
     axiosRequestConfig: {
       baseURL,
       timeout: 100000000,
@@ -64,6 +42,5 @@ export const backendAxiosFactory = () => {
   const responseSuccessInterceptor = (value: AxiosResponse<any>) => value;
 
   backendAxios.instance.interceptors.response.use(responseSuccessInterceptor);
-  /* eslint-enable @typescript-eslint/no-explicit-any */
   return backendAxios;
 };

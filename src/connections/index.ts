@@ -1,10 +1,12 @@
+import { 
+  ExtendedAxios,
+} from 'utils';
 import {
-  BackendAxios,
   backendAxiosFactory,
 } from './backend';
 
 export class Connections {
-  backend: BackendAxios;
+  backend: ExtendedAxios;
 
   constructor() {
     this.backend = backendAxiosFactory();
