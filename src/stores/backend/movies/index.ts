@@ -3,10 +3,6 @@ import {
   observable,
 } from 'mobx';
 import {
-  createModelSchema,
-  primitive,
-} from 'serializr';
-import {
   Actor,
   Movie,
   Genre,
@@ -35,10 +31,6 @@ import {
   getSimilarMovies,
   getGenreMovies,
 } from './requests';
-
-createModelSchema(Movie, {
-
-});
 
 export class MovieStore extends BaseBackendStore {
   getPopularMovies = async (): Promise<Movie[]> => {

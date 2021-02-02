@@ -15,12 +15,6 @@ export class BackendStores {
     public parent: Stores,
   ) { }
 
-  hydrate() {
-    return Promise.all([
-      this.movies.hydrate(),
-    ]);
-  }
-
   updateConnections(connections: Connections) {
     this.connections = connections;
     this.movies.connections = connections;

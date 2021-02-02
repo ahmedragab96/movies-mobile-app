@@ -1,4 +1,3 @@
-import AsyncStorage from '@react-native-community/async-storage';
 import {
   create,
 } from 'mobx-persist';
@@ -10,27 +9,11 @@ import {
   ListBackendEntity,
   PaginatedListBackendEntity,
 } from 'utils';
-
-export const hydrate = create({
-  storage: AsyncStorage,
-  jsonify: true,
-});
-
 interface ObservableDriver {
   driverName: string;
 }
 export class BaseStore {
   observableDrivers: ObservableDriver[] = [];
-
-  async hydrate() {
-    await hydrate(this.constructor.name, this);
-    this.observableDrivers.forEach(({
-      driverName,
-    }) => {
-      const driver: any = (this as any)[driverName];
-      driver._setData((this as any)[driver._observableName], false);
-    });
-  }
 
   makeObservable() {
     return makeObservable(this);
