@@ -171,7 +171,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "eg.contact"
+        applicationId "com.ragab.egymovies"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 36

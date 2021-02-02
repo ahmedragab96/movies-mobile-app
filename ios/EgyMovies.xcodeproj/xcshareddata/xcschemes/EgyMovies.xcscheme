@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
                BuildableName = "Contact Egypt.app"
-               BlueprintName = "contact"
-               ReferencedContainer = "container:contact.xcodeproj">
+               BlueprintName = "EgyMovies"
+               ReferencedContainer = "container:EgyMovies.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,8 +46,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "Contact Egypt.app"
-            BlueprintName = "contact"
-            ReferencedContainer = "container:contact.xcodeproj">
+            BlueprintName = "EgyMovies"
+            ReferencedContainer = "container:EgyMovies.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "Contact Egypt.app"
-            BlueprintName = "contact"
-            ReferencedContainer = "container:contact.xcodeproj">
+            BlueprintName = "EgyMovies"
+            ReferencedContainer = "container:EgyMovies.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

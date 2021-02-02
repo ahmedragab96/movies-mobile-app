@@ -31,7 +31,7 @@
 		B8B8060A324A492B85881070 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46B90F038D604964BD45CA24 /* MaterialIcons.ttf */; };
 		C8904B398AFE43F2916DBFE9 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 465C4D2D9B344B22AD9AE5BF /* FontAwesome5_Brands.ttf */; };
 		D44626B9E25B4D9B8A6C3B5F /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1477DA0877E7445BAE17B3A5 /* FontAwesome5_Regular.ttf */; };
-		E00EA0B586205DEC377889D1 /* libPods-contact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC46D4B14140118C49C05F00 /* libPods-contact.a */; };
+		E00EA0B586205DEC377889D1 /* libPods-EgyMovies.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC46D4B14140118C49C05F00 /* libPods-EgyMovies.a */; };
 		E51FA3CE21A24FB5BE6CA696 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44A5641439E4440BB3B67E4E /* AntDesign.ttf */; };
 		E7B381794A6D453F9988E8FA /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F660078925D7450ABEC44E6E /* Zocial.ttf */; };
 		F1F8E5A709C540E7BB8669DC /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C0EFCFCA04D400C84963059 /* SimpleLineIcons.ttf */; };
@@ -41,15 +41,15 @@
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* contactTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = contactTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* EgyMoviesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EgyMoviesTests.m; sourceTree = "<group>"; };
 		01408098D62C4E1C8C096FD7 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		0289FCD9FABD48BEB5AB1ABC /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		0836B91356D84B98AF4B16E5 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Contact Egypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contact Egypt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = contact/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = contact/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = contact/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = contact/main.m; sourceTree = "<group>"; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EgyMovies/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = EgyMovies/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = EgyMovies/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EgyMovies/main.m; sourceTree = "<group>"; };
 		1477DA0877E7445BAE17B3A5 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		26FB0841B398495DBA2F45EC /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
 		31CED3E080D94787AF608BFB /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
@@ -58,25 +58,25 @@
 		44A5641439E4440BB3B67E4E /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		465C4D2D9B344B22AD9AE5BF /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		46B90F038D604964BD45CA24 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
-		486C91FF259E12CD00443D1C /* Contact Egypt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "Contact Egypt.entitlements"; path = "contact/Contact Egypt.entitlements"; sourceTree = "<group>"; };
-		486C9202259E222300443D1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "contact/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		487E857A2581885E007B212C /* contactRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = contactRelease.entitlements; path = contact/contactRelease.entitlements; sourceTree = "<group>"; };
+		486C91FF259E12CD00443D1C /* Contact Egypt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "Contact Egypt.entitlements"; path = "EgyMovies/Contact Egypt.entitlements"; sourceTree = "<group>"; };
+		486C9202259E222300443D1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "EgyMovies/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		487E857A2581885E007B212C /* EgyMoviesRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = EgyMoviesRelease.entitlements; path = EgyMovies/EgyMoviesRelease.entitlements; sourceTree = "<group>"; };
 		487E857D25818FBE007B212C /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		487E857F25818FD1007B212C /* contact.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = contact.entitlements; path = contact/contact.entitlements; sourceTree = "<group>"; };
-		488CD62C2582179A00C2710E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = contact/Images.xcassets; sourceTree = "<group>"; };
+		487E857F25818FD1007B212C /* EgyMovies.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = EgyMovies.entitlements; path = EgyMovies/EgyMovies.entitlements; sourceTree = "<group>"; };
+		488CD62C2582179A00C2710E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = EgyMovies/Images.xcassets; sourceTree = "<group>"; };
 		596FA6F0D11C42FEAA53E9CD /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		5BFE194AADA541768349DEB6 /* Nexa-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-Black.otf"; path = "../src/assets/fonts/Nexa-Black.otf"; sourceTree = "<group>"; };
-		6AFC7328FC62BDD0A1C83DB8 /* Pods-contact.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contact.staging.xcconfig"; path = "Target Support Files/Pods-contact/Pods-contact.staging.xcconfig"; sourceTree = "<group>"; };
+		6AFC7328FC62BDD0A1C83DB8 /* Pods-EgyMovies.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EgyMovies.staging.xcconfig"; path = "Target Support Files/Pods-EgyMovies/Pods-EgyMovies.staging.xcconfig"; sourceTree = "<group>"; };
 		79B991549BB349DAA1A5BC06 /* Nexa-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-Regular.otf"; path = "../src/assets/fonts/Nexa-Regular.otf"; sourceTree = "<group>"; };
 		7A87E99BB7234FE889A342BE /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = contact/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = EgyMovies/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EEB0F6311A1407D8433139E /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		9C0EFCFCA04D400C84963059 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		AD12865125D94224A08FEE8B /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		B4B0F97342C24BF099B68E74 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
-		BC46D4B14140118C49C05F00 /* libPods-contact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-contact.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6D8B6A90E898143CD6AA556 /* Pods-contact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contact.release.xcconfig"; path = "Target Support Files/Pods-contact/Pods-contact.release.xcconfig"; sourceTree = "<group>"; };
-		DD6E2CE7B58C49796D182B15 /* Pods-contact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contact.debug.xcconfig"; path = "Target Support Files/Pods-contact/Pods-contact.debug.xcconfig"; sourceTree = "<group>"; };
+		BC46D4B14140118C49C05F00 /* libPods-EgyMovies.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EgyMovies.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6D8B6A90E898143CD6AA556 /* Pods-EgyMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EgyMovies.release.xcconfig"; path = "Target Support Files/Pods-EgyMovies/Pods-EgyMovies.release.xcconfig"; sourceTree = "<group>"; };
+		DD6E2CE7B58C49796D182B15 /* Pods-EgyMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EgyMovies.debug.xcconfig"; path = "Target Support Files/Pods-EgyMovies/Pods-EgyMovies.debug.xcconfig"; sourceTree = "<group>"; };
 		DE072D0F4042411CAC504D72 /* Nexa-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nexa-Bold.otf"; path = "../src/assets/fonts/Nexa-Bold.otf"; sourceTree = "<group>"; };
 		E2B129DD183C4EB799379715 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -90,20 +90,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				487E857E25818FBE007B212C /* GameKit.framework in Frameworks */,
-				E00EA0B586205DEC377889D1 /* libPods-contact.a in Frameworks */,
+				E00EA0B586205DEC377889D1 /* libPods-EgyMovies.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* contactTests */ = {
+		00E356EF1AD99517003FC87E /* EgyMoviesTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* contactTests.m */,
+				00E356F21AD99517003FC87E /* EgyMoviesTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = contactTests;
+			path = EgyMoviesTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -114,13 +114,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* contact */ = {
+		13B07FAE1A68108700A75B9A /* EgyMovies */ = {
 			isa = PBXGroup;
 			children = (
 				486C9202259E222300443D1C /* GoogleService-Info.plist */,
 				486C91FF259E12CD00443D1C /* Contact Egypt.entitlements */,
-				487E857F25818FD1007B212C /* contact.entitlements */,
-				487E857A2581885E007B212C /* contactRelease.entitlements */,
+				487E857F25818FD1007B212C /* EgyMovies.entitlements */,
+				487E857A2581885E007B212C /* EgyMoviesRelease.entitlements */,
 				488CD62C2582179A00C2710E /* Images.xcassets */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -129,7 +129,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = contact;
+			name = EgyMovies;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -138,7 +138,7 @@
 				487E857D25818FBE007B212C /* GameKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				BC46D4B14140118C49C05F00 /* libPods-contact.a */,
+				BC46D4B14140118C49C05F00 /* libPods-EgyMovies.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,9 +182,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* contact */,
+				13B07FAE1A68108700A75B9A /* EgyMovies */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* contactTests */,
+				00E356EF1AD99517003FC87E /* EgyMoviesTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BFEFC5D18BE268B052CE1A50 /* Pods */,
@@ -206,9 +206,9 @@
 		BFEFC5D18BE268B052CE1A50 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DD6E2CE7B58C49796D182B15 /* Pods-contact.debug.xcconfig */,
-				C6D8B6A90E898143CD6AA556 /* Pods-contact.release.xcconfig */,
-				6AFC7328FC62BDD0A1C83DB8 /* Pods-contact.staging.xcconfig */,
+				DD6E2CE7B58C49796D182B15 /* Pods-EgyMovies.debug.xcconfig */,
+				C6D8B6A90E898143CD6AA556 /* Pods-EgyMovies.release.xcconfig */,
+				6AFC7328FC62BDD0A1C83DB8 /* Pods-EgyMovies.staging.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -216,9 +216,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13B07F861A680F5B00A75B9A /* contact */ = {
+		13B07F861A680F5B00A75B9A /* EgyMovies */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "contact" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "EgyMovies" */;
 			buildPhases = (
 				A77B91B3E417FF6EEF941084 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -233,8 +233,8 @@
 			);
 			dependencies = (
 			);
-			name = contact;
-			productName = contact;
+			name = EgyMovies;
+			productName = EgyMovies;
 			productReference = 13B07F961A680F5B00A75B9A /* Contact Egypt.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -253,7 +253,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "contact" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "EgyMovies" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -266,7 +266,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* contact */,
+				13B07F861A680F5B00A75B9A /* EgyMovies */,
 			);
 		};
 /* End PBXProject section */
@@ -327,7 +327,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-contact/Pods-contact-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EgyMovies/Pods-EgyMovies-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -336,7 +336,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-contact/Pods-contact-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EgyMovies/Pods-EgyMovies-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A77B91B3E417FF6EEF941084 /* [CP] Check Pods Manifest.lock */ = {
@@ -354,7 +354,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-contact-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EgyMovies-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -407,24 +407,24 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD6E2CE7B58C49796D182B15 /* Pods-contact.debug.xcconfig */;
+			baseConfigurationReference = DD6E2CE7B58C49796D182B15 /* Pods-EgyMovies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "contact/Contact Egypt.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "EgyMovies/Contact Egypt.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = X6UV3V6V9T;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = contact/Info.plist;
+				INFOPLIST_FILE = EgyMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = eg.contact;
+				PRODUCT_BUNDLE_IDENTIFIER = eg.EgyMovies;
 				PRODUCT_NAME = "Contact Egypt";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -435,23 +435,23 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6D8B6A90E898143CD6AA556 /* Pods-contact.release.xcconfig */;
+			baseConfigurationReference = C6D8B6A90E898143CD6AA556 /* Pods-EgyMovies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "contact/Contact Egypt.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "EgyMovies/Contact Egypt.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = X6UV3V6V9T;
-				INFOPLIST_FILE = contact/Info.plist;
+				INFOPLIST_FILE = EgyMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = eg.contact;
+				PRODUCT_BUNDLE_IDENTIFIER = eg.EgyMovies;
 				PRODUCT_NAME = "Contact Egypt";
 				PROVISIONING_PROFILE_SPECIFIER = Production;
 				SWIFT_VERSION = 5.0;
@@ -633,24 +633,24 @@
 		};
 		CAA172DF25AB8CE600A55567 /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AFC7328FC62BDD0A1C83DB8 /* Pods-contact.staging.xcconfig */;
+			baseConfigurationReference = 6AFC7328FC62BDD0A1C83DB8 /* Pods-EgyMovies.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "contact/Contact Egypt.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "EgyMovies/Contact Egypt.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 35;
 				DEVELOPMENT_TEAM = X6UV3V6V9T;
 				EXCLUDED_ARCHS = arm64;
-				INFOPLIST_FILE = contact/Info.plist;
+				INFOPLIST_FILE = EgyMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = eg.contact;
+				PRODUCT_BUNDLE_IDENTIFIER = eg.EgyMovies;
 				PRODUCT_NAME = "Contact Egypt";
 				PROVISIONING_PROFILE_SPECIFIER = Production;
 				SWIFT_VERSION = 5.0;
@@ -661,7 +661,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "contact" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "EgyMovies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -671,7 +671,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "contact" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "EgyMovies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
