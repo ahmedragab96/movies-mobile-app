@@ -4,8 +4,6 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
-#import <CodePush/CodePush.h>
-
 #import <Firebase.h> 
 
 #ifdef FB_SONARKIT_ENABLED
@@ -69,8 +67,7 @@ static void InitializeFlipper(UIApplication *application) {
       [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"
                                                      fallbackResource:nil];
 #else
-  // return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-  return [CodePush bundleURL];
+  return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
 }
 
