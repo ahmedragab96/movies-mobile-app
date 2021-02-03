@@ -3,6 +3,7 @@ import { Movie } from "shared/DTOs";
 export interface MovieCardComponentProps {
   data: Movie;
   variant: MovieCardVariants;
+  imageWidth?: number; 
 }
 
 export interface MovieCardComponentStyles {

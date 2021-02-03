@@ -87,7 +87,7 @@ const moviesScreen: React.FC = () => {
       renderItem={({
         item,
       }) => (
-        <MovieCardComponent data={item} variant={MovieCardVariants.LIST} />
+        <MovieCardComponent data={item} variant={MovieCardVariants.LIST} imageWidth={175} />
       )}
       directionalLockEnabled
       showsHorizontalScrollIndicator={false}

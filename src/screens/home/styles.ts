@@ -27,7 +27,7 @@ const styles = (theme: Theme): IStyles => {
       display: "flex",
       alignItems: "center",
       backgroundColor: theme.palette.others.bottomTabsBackground,
-      width: 100,
+      width: '100%',
       marginTop: spacing(2),
     },
     container: {

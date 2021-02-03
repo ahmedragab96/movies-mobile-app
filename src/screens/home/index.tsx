@@ -83,12 +83,12 @@ const homeScreen: React.FC = () => {
   const renderItem: ListRenderItem<Movie> = ({item}) =>  {
 
     return (
-      <MovieCardComponent data={item} variant={MovieCardVariants.LIST} />
+      <MovieCardComponent data={item} variant={MovieCardVariants.LIST} imageWidth={160} />
     )
   }
   const renderItemCarousel: ListRenderItem<Movie> = ({item}) => {
     return (
-      <MovieCardComponent data={item} variant={MovieCardVariants.FOCUSE} />
+      <MovieCardComponent data={item} variant={MovieCardVariants.FOCUSE}  />
     )
   }
   const { data: popular, loadingState } = stores.backend.movies.popularMovies;
@@ -97,11 +97,13 @@ const homeScreen: React.FC = () => {
 
   if (loadingState === LoadingState.LOADING || TopRatedLoading === LoadingState.LOADING || upComingLoading === LoadingState.LOADING) {
     return (
-      <ActivityIndicator
-        size="small"
-        style={selectStyle('spinnerStyle')}
-        color={theme.palette.secondary.value}
-      />
+      <View style={selectStyle('container')}>
+        <ActivityIndicator
+          size="small"
+          style={selectStyle('spinnerStyle')}
+          color={theme.palette.secondary.value}
+        />
+      </View>
     )
   }
   return (

@@ -21,7 +21,7 @@ import { useNavigationUtils } from 'hooks';
 
 const MovieCardComponent: React.FC<MovieCardComponentProps> = (props) => {
   const { theme } = useTheme();
-  const { data, variant } = props;
+  const { data, variant, imageWidth } = props;
   const {
     selectStyle,
   } = useStyles(styles);
@@ -40,6 +40,7 @@ const MovieCardComponent: React.FC<MovieCardComponentProps> = (props) => {
             source={{
               uri: `https://image.tmdb.org/t/p/w780/${data.poster_path}`,
             }}
+            width={imageWidth}
           />
           <View style={selectStyle('widthTypo')}>
             <Typography
